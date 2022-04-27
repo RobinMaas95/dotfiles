@@ -99,7 +99,8 @@ return packer.startup(function(use)
 
   -- Lightspeed
   use "ggandor/lightspeed.nvim"
-
+  -- Surround
+  use "tpope/vim-surround"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
