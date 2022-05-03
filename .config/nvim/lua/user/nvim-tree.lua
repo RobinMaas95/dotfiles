@@ -21,6 +21,26 @@ vim.g.nvim_tree_icons = {
   },
 }
 
+-- There is some kind of refactoring/migration going on in the upstream
+ -- project, so these Vim/ global settings are likely temporary and may return to
+ -- the `setup(...)` configuration at some point in the future. Maybe?
+ --
+ -- https://github.com/kyazdani42/nvim-tree.lua/issues/674
+ -- https://github.com/LunarVim/Neovim-from-scratch/issues/124
+
+ -- Enables file highlight for Git attributes
+ vim.g["nvim_tree_git_hl"] = 1
+ -- In what format to show root folder
+ vim.g["nvim_tree_root_folder_modifier"] = ":t"
+ -- Icons to render
+ vim.g["nvim_tree_show_icons"] = {
+   git = 1,
+   folders = 1,
+   files = 1,
+   folder_arrows = 1,
+   tree_width = 30,
+ }
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -45,10 +65,6 @@ nvim_tree.setup {
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
   diagnostics = {
     enable = true,
     icons = {
@@ -81,7 +97,6 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
@@ -97,15 +112,10 @@ nvim_tree.setup {
     cmd = "trash",
     require_confirm = true,
   },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-  },
+  actions = {
+    open_file = {
+      -- Cloeses tree when you open a file
+      quit_on_open = true
+    }
+  }
 }
