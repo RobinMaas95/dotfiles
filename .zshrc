@@ -124,4 +124,6 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug load
 
 # Config command for managing dotfiles
-alias config='/usr/local/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+export PATH="/Users/robin/Library/Python/3.8/bin/:$PATH"
+
