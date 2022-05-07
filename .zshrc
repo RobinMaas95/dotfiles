@@ -123,11 +123,5 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug load
 
-
-# Neovim
-export PATH="/Users/robin/.local/bin/:$PATH"
-eval "$(pyenv init -)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Config command for managing dotfiles
 alias config='/usr/local/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
