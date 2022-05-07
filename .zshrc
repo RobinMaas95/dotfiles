@@ -127,3 +127,6 @@ zplug load
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 export PATH="/Users/robin/Library/Python/3.8/bin/:$PATH"
 
+# Autocomplete Azure CLI
+autoload -U +X bashcompinit && bashcompinit
+source /opt/homebrew/etc/bash_completion.d/az
