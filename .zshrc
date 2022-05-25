@@ -130,3 +130,9 @@ export PATH="/Users/robin/Library/Python/3.8/bin/:$PATH"
 # Autocomplete Azure CLI
 autoload -U +X bashcompinit && bashcompinit
 source /opt/homebrew/etc/bash_completion.d/az
+
+# Created by `pipx` on 2022-05-24 12:53:34
+export PATH="$PATH:/Users/robin/.local/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
