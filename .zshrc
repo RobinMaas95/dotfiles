@@ -120,6 +120,7 @@ zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/wprompt.zsh}"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "jeffreytse/zsh-vi-mode"
 zplug load
 
 # Config command for managing dotfiles
