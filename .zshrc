@@ -67,7 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker pdm git z github history macos pip python vscode aws terraform zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(docker pdm git z github history macos pip python vscode aws terraform zsh-syntax-highlighting zsh-autosuggestions kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,19 +96,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias lg='lazygit'
-
-# source /Users/robin/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Aliases
 alias la='ls -lah --color=auto'
 alias lh='ls -lh --color=auto'
 alias ls='ls --color=auto'
 alias l='ls --color=auto'
 alias grep='grep --color=auto'
+alias k="kubectl"
+alias lg='lazygit'
+#
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# source /Users/robin/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Gray color for autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
