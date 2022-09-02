@@ -106,9 +106,6 @@ return packer.startup(function(use)
 
   -- taod
   use "hashivim/vim-terraform"
-  
-  -- copilot
-  use "github/copilot.vim"
 
   -- helm syntax highlighting
   use "towolf/vim-helm"
