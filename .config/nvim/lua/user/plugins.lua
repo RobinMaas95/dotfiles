@@ -112,8 +112,13 @@ return packer.startup(function(use)
 
   -- helm syntax highlighting
   use "towolf/vim-helm"
+
+  -- Format buffer
+  use "z0mbix/vim-shfmt"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
