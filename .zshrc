@@ -140,3 +140,6 @@ eval "$(pyenv init -)"
 eval "$(navi widget zsh)"
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
