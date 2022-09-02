@@ -112,6 +112,12 @@ return packer.startup(function(use)
 
   -- Format buffer
   use "z0mbix/vim-shfmt"
+
+  -- Toggle relative numbers on/off if the buffer is in focus or not
+  use "jeffkreeftmeijer/vim-numbertoggle"
+
+  -- Sticky headers for relative numbers
+  use "nvim-treesitter/nvim-treesitter-context"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 
