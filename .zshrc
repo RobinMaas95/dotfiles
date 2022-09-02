@@ -135,3 +135,8 @@ export PATH="$PATH:/Users/robin/.local/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# navi
+eval "$(navi widget zsh)"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
