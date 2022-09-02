@@ -73,7 +73,7 @@ nvim_tree.setup {
       warning = "",
       error = "",
     },
-  },
+ },
   update_focused_file = {
     enable = true,
     update_cwd = true,
