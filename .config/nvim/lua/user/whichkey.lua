@@ -78,10 +78,6 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
-local vmappings = {
-  ["/"] = { "<ESC><CMD>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
-}
-
 local mappings = {
   ["/"] = { "<ESC><CMD>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
