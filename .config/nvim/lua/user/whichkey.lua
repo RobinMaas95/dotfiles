@@ -193,6 +193,10 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  C = {
+    name= "Copy",
+    a = { "<cmd>%y+<cr>", "Copy All" }
+  }
 }
 
 which_key.setup(setup)
