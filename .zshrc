@@ -143,3 +143,5 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 # zoxide
 eval "$(zoxide init zsh)"
 
+# Export go bin Path
+export PATH=$PATH:/Users/robin/go/bin
