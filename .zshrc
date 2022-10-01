@@ -67,7 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git z github history macos pip python vscode aws terraform zsh-syntax-highlighting zsh-autosuggestions kubectl)
+plugins=(docker git z github history macos pip python vscode aws terraform zsh-syntax-highlighting zsh-autosuggestions kubectl zsh-secrets)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -145,3 +145,7 @@ eval "$(zoxide init zsh)"
 
 # Export go bin Path
 export PATH=$PATH:/Users/robin/go/bin
+
+# Export config for zsh-secrets (https://github.com/chuwy/zsh-secrets)
+export RECEPIENT="robin.maasjosthusmann@taod.de"
+export SECRETS_STORAGE=/Users/robin/.secrets/
