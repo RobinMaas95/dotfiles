@@ -67,7 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git z github history macos pip python vscode aws terraform zsh-syntax-highlighting zsh-autosuggestions kubectl zsh-secrets)
+plugins=(docker git z github history macos pip python vscode aws terraform zsh-syntax-highlighting zsh-autosuggestions kubectl zsh-secrets git-auto-fetch)
 
 source $ZSH/oh-my-zsh.sh
 
