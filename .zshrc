@@ -103,6 +103,7 @@ alias l='ls --color=auto'
 alias grep='grep --color=auto'
 alias k="kubectl"
 alias lg='lazygit'
+alias exa="exa --long --git --header"
 #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
