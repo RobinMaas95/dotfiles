@@ -46,6 +46,7 @@ apps=(
   zoxide
   zplug
   zsh-syntax-highlighting
+  ripgrep
 )
 
 brew install "${apps[@]}"
