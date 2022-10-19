@@ -129,6 +129,9 @@ return packer.startup(function(use)
 		-- Uncomment next line if you want to follow only stable versions
 		-- tag = "*"
 	})
+
+	-- copilot
+	use("github/copilot.vim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 
