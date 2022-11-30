@@ -134,6 +134,9 @@ return packer.startup(function(use)
 	-- Lazygit
 	use("kdheepak/lazygit.nvim")
 
+	-- FTerm
+	use("numToStr/FTerm.nvim")
+
 	-- copilot
 	use("github/copilot.vim")
 	-- Automatically set up your configuration after cloning packer.nvim
