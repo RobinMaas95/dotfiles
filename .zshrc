@@ -150,3 +150,4 @@ export PATH=$PATH:/Users/robin/go/bin
 # Export config for zsh-secrets (https://github.com/chuwy/zsh-secrets)
 export RECEPIENT="robin.maasjosthusmann@taod.de"
 export SECRETS_STORAGE=/Users/robin/.secrets/
+export PATH="${PATH}:${HOME}/.krew/bin"
