@@ -1,13 +1,13 @@
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew upgrade
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# brew update
+# brew upgrade
 
 # Install packages
 apps=(
   age
   argocd
-  azure-cli
+  # azure-cli
   bat
   btop
   coreutils
@@ -46,6 +46,7 @@ apps=(
   zoxide
   zplug
   zsh-syntax-highlighting
+  lua
   ripgrep
 )
 

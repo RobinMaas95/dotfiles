@@ -2,18 +2,18 @@
 apps=(
   alfred
   authy
-  azure-data-studio
+  # azure-data-studio
   bitwarden
-  docker
+  # docker
   font-hack-nerd-font
   gimp
-  karabiner-elements
+  # karabiner-elements
   kitty
-  microsoft-azure-storage-explorer
+  # microsoft-azure-storage-explorer
   notion
-  openvpn-connect
+  # openvpn-connect
   postman
-  secretive
+  # secretive
   visual-studio-code
 )
 
