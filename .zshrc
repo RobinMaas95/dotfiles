@@ -124,18 +124,18 @@ zplug "jeffreytse/zsh-vi-mode"
 zplug load
 
 # Config command for managing dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 export PATH="/Users/robin/Library/Python/3.8/bin/:$PATH"
 
 # Autocomplete Azure CLI
-autoload -U +X bashcompinit && bashcompinit
-source /opt/homebrew/etc/bash_completion.d/az
+# autoload -U +X bashcompinit && bashcompinit
+# source /opt/homebrew/etc/bash_completion.d/az
 
 # Created by `pipx` on 2022-05-24 12:53:34
-export PATH="$PATH:/Users/robin/.local/bin"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PATH="$PATH:/Users/robin/.local/bin"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # navi
 eval "$(navi widget zsh)"
@@ -147,7 +147,43 @@ eval "$(zoxide init zsh)"
 # Export go bin Path
 export PATH=$PATH:/Users/robin/go/bin
 
-# Export config for zsh-secrets (https://github.com/chuwy/zsh-secrets)
-export RECEPIENT="robin.maasjosthusmann@taod.de"
-export SECRETS_STORAGE=/Users/robin/.secrets/
-export PATH="${PATH}:${HOME}/.krew/bin"
+
+## Set up Pipenv
+# Set your preferred Python version.
+export PYENV_VERSION=3.11.0
+
+export PIPX_BIN_DIR=~/.local/bin
+export PYENV_ROOT=~/.pyenv
+
+# -U eliminates duplicates.
+export -U PATH path         
+path=( 
+    $PIPX_BIN_DIR
+    $PYENV_ROOT/{bin,shims} 
+    $path
+)
+
+# Updates the global python, if necessary, and installs/upgrades pipenv.
+pybake() {
+  # Install pyenv, if necessary.
+  command -v pyenv > /dev/null || 
+      brew install pyenv
+
+  # Install your preferred Python.
+  # Does nothing if $PYENV_VERSION hasn't changed.
+  pyenv install --skip-existing $PYENV_VERSION
+
+  pyenv global $PYENV_VERSION  # Make it your default.
+  pip install -U pip           # Update pip.
+
+  # Install pipx (into ~/.local/bin) or update it.
+  # pipx is like brew, but for Python.
+  pip install -U --user pipx   
+
+  # Install or update pipenv.
+  pipx ${${$( command -v pipenv ):+upgrade}:-install} pipenv
+}
+
+eval "$( pyenv init - )"
+eval "$( pip completion --zsh )"
+eval "$( register-python-argcomplete pipx )"
